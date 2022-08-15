@@ -1,0 +1,21 @@
+[package]
+name = "chicken-rs"
+version = "0.1.0"
+authors = [ "velleda" ]
+edition = "2021"
+description = "a Chicken interpreter that aims to be as accurate to the original JavaScript implementation as possible"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+html-escape = "0.2"
+clap = { version = "3.2", features = [ "derive" ] }
+colored = "2.0"
+
+[lib]
+name = "chicken"
+path = "src/lib.rs"
+
+[[bin]]
+name = "chicken"
+path = "src/bin.rs"
